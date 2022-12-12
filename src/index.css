@@ -61,7 +61,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -73,4 +72,14 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.usersdiv {
+  background-color: rgba(226, 226, 226, 0.075);
+  padding: 40px;
+  margin: 6px;
+}
+.userscontainer {
+  width: 600px;
+  display: inline-block;
 }

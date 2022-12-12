@@ -54,14 +54,14 @@ const UserAPI = () => {
     )
 
     const listItems = userDatas.map((d) => (
-        <div>
-            <img key={d.login.uuid} src={d.picture.large} alt="" />
-            <li key={d.login.uuid}>
-            {[ d.name.title, ' ', d.name.first, ' ', d.name.last]}
-            </li>
-            <p key={d.login.uuid}>{d.email}</p>
-            <p key={d.login.uuid}>{d.phone}</p>
-            <hr />
+        <div className="userscontainer">
+            <div className="usersdiv">
+                <img key={d.login.uuid} src={d.picture.large} alt="" />
+                <p key={d.login.uuid}>{[ d.name.title, ' ', d.name.first, ' ', d.name.last]}</p>
+                <p key={d.login.uuid}>{d.email}</p>
+                <p key={d.login.uuid}>{d.phone}</p>
+                <hr />
+            </div>
         </div>
     ))
 
