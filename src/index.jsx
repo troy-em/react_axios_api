@@ -6,8 +6,8 @@ import UserAPI from "./UserAPI"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
-    <Counter/>
     <UserAPI/>
+    <Counter/>
   </>
 
 )

@@ -14,6 +14,7 @@ const Counter = () => {
 
   return(
     <>
+      <p style={{color: '#f4c095'}}>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
       <h2>This is a React Counter</h2>
       <h4><small>Using</small> <b style={{color: 'orange'}}>useState</b> & <b style={{color: 'violet'}}>useEffect</b></h4>
       <p style={{color: 'green', fontWeight: '700', fontSize: '44px'}}>{counter}</p>

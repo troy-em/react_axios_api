@@ -56,11 +56,12 @@ const UserAPI = () => {
     const multipleUsers = userDatas.map((d) => (
         <div id="userscontainer" className="userscontainer">
             <div id="usersdiv" className="usersdiv">
-                <img key={d.login.uuid} src={d.picture.large} alt="" />
-                <p key={d.login.uuid}>{[ d.name.title, ' ', d.name.first, ' ', d.name.last]}</p>
-                <p key={d.login.uuid}>{d.email}</p>
-                <p key={d.login.uuid}>{d.phone}</p>
-                <button>Edit User</button>
+                <img key={d.picture.large} src={d.picture.large} alt="" />
+                <p key={d.name.first}>{[ d.name.title, ' ', d.name.first, ' ', d.name.last]}</p>
+                <p key={d.email}>{d.email}</p>
+                <p key={d.phone}>{d.phone}</p>
+                <button style={{margin:'6px', backgroundColor: '#f4c095'}}>Follow</button>
+                <button style={{margin:'6px', backgroundColor: '#1d7874'}}>View Account</button>
                 {/* <hr /> */}
             </div>
         </div>
@@ -70,19 +71,19 @@ const UserAPI = () => {
         <>
             <hr />
             <h1>User API Component</h1>
-            <p>||||||||||||||||||||||||| single User Fetch |||||||||||||||||||||||||||</p>
+            <p style={{color: '#f4c095'}}>||||||||||||||||||||||||| single User Fetch |||||||||||||||||||||||||||</p>
             <br />
             <img src={userData.Image} alt="" />
-            <p><b style={{color: 'green'}}>Full Name: </b>{userData.FullName}</p>
-            <p><b style={{color: 'green'}}>Email: </b>{userData.Email}</p>
-            <p><b style={{color: 'green'}}>Phone: </b>{userData.Phone}</p>
+            <p><b style={{color: '#1d7874'}}>Full Name: </b>{userData.FullName}</p>
+            <p><b style={{color: '#1d7874'}}>Email: </b>{userData.Email}</p>
+            <p><b style={{color: '#1d7874'}}>Phone: </b>{userData.Phone}</p>
             <button onClick={() => {
                 // const myNode = document.getElementById("usersdiv");
                 // myNode.innerHTML=""
                 // clearDiv()
                 getUser()
             }}>Refresh</button>
-            <p>||||||||||||||||||||||| Multiple Users Fetch ||||||||||||||||||||||||||</p>
+            <p style={{color: '#f4c095'}}>||||||||||||||||||||||| Multiple Users Fetch ||||||||||||||||||||||||||</p>
             <div>
                 {multipleUsers}
             </div>
