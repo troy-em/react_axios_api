@@ -69,8 +69,9 @@ const UserAPI = () => {
 
     return(
         <>
+            <h1>React User Component</h1>
+            <p>The api uses axios to fetch random user data from <b style={{color: '#1d7874'}}>https://randomuser.me/api/</b></p>
             <hr />
-            <h1>User API Component</h1>
             <p style={{color: '#f4c095'}}>||||||||||||||||||||||||| single User Fetch |||||||||||||||||||||||||||</p>
             <br />
             <img src={userData.Image} alt="" />
