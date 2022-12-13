@@ -1,6 +1,6 @@
 # react_axios_api
 
-A learning API for react hooks useState, useEffect.
+A learning API for react hooks useState, useEffect. <br>
 The api uses axios to fetch random user data from  https://randomuser.me/api/
 
 TO RUN
