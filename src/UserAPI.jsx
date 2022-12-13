@@ -50,7 +50,7 @@ const UserAPI = () => {
             getUser();
         }, 1000)
         return () => clearTimeout(timer)
-    }, [] //remove the empty array to get a new user every 5 seconds
+    }, [] //remove the empty array to get a new user every 1 second
     )
 
     const multipleUsers = userDatas.map((d) => (
@@ -78,8 +78,6 @@ const UserAPI = () => {
             <p><b style={{color: '#1d7874'}}>Email: </b>{userData.Email}</p>
             <p><b style={{color: '#1d7874'}}>Phone: </b>{userData.Phone}</p>
             <button onClick={() => {
-                // const myNode = document.getElementById("usersdiv");
-                // myNode.innerHTML=""
                 // clearDiv()
                 getUser()
             }}>Refresh</button>
