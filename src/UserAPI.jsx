@@ -53,14 +53,15 @@ const UserAPI = () => {
     }, [] //remove the empty array to get a new user every 5 seconds
     )
 
-    const listItems = userDatas.map((d) => (
-        <div className="userscontainer">
-            <div className="usersdiv">
+    const multipleUsers = userDatas.map((d) => (
+        <div id="userscontainer" className="userscontainer">
+            <div id="usersdiv" className="usersdiv">
                 <img key={d.login.uuid} src={d.picture.large} alt="" />
                 <p key={d.login.uuid}>{[ d.name.title, ' ', d.name.first, ' ', d.name.last]}</p>
                 <p key={d.login.uuid}>{d.email}</p>
                 <p key={d.login.uuid}>{d.phone}</p>
-                <hr />
+                <button>Edit User</button>
+                {/* <hr /> */}
             </div>
         </div>
     ))
@@ -69,20 +70,31 @@ const UserAPI = () => {
         <>
             <hr />
             <h1>User API Component</h1>
+            <p>||||||||||||||||||||||||| single User Fetch |||||||||||||||||||||||||||</p>
             <br />
             <img src={userData.Image} alt="" />
             <p><b style={{color: 'green'}}>Full Name: </b>{userData.FullName}</p>
             <p><b style={{color: 'green'}}>Email: </b>{userData.Email}</p>
             <p><b style={{color: 'green'}}>Phone: </b>{userData.Phone}</p>
             <button onClick={() => {
-                getUser();
-            }}>Get User</button>
-            <p>||||||||||||||||||||||||| end of single user |||||||||||||||||||||||||||</p>
+                // const myNode = document.getElementById("usersdiv");
+                // myNode.innerHTML=""
+                // clearDiv()
+                getUser()
+            }}>Refresh</button>
+            <p>||||||||||||||||||||||| Multiple Users Fetch ||||||||||||||||||||||||||</p>
             <div>
-                {listItems}
+                {multipleUsers}
             </div>
         </>
     )
+}
+
+const clearDiv = () => {
+    const myNode = document.getElementById("userscontainer");
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.lastChild);
+    }
 }
 
 export default UserAPI

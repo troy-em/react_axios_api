@@ -5,6 +5,7 @@
   font-weight: 400;
   display: flex;
   justify-content: center;
+  padding: 100px;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -80,6 +81,6 @@ button:focus-visible {
   margin: 6px;
 }
 .userscontainer {
-  width: 600px;
+  width: 360px;
   display: inline-block;
 }
